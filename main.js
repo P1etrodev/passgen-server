@@ -24,4 +24,8 @@ app.post("/password", (req, res) => {
 	res.status(200).json(answer);
 });
 
+app.get(["/", "/ping"], (req, res) =>
+	res.status(200).json({ status: "success", message: "Pong!" })
+);
+
 app.listen(PORT, () => console.log(`Listening to port ${PORT}`));
