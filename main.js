@@ -19,7 +19,7 @@ app.post("/password", (req, res) => {
 
 	answer = { status: "success", password: String(pwd) };
 
-	console.log(answer);
+	// console.log(answer);
 
 	res.status(200).json(answer);
 });
