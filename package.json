@@ -4,13 +4,14 @@
 	"description": "Service",
 	"main": "main.js",
 	"scripts": {
-		"start": "node ./main.js",
+		"start": "node main.js",
 		"dev": "nodemon main.js"
 	},
 	"author": "Sylph1de",
 	"license": "ISC",
 	"dependencies": {
 		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
 		"express": "^4.18.2"
 	}
 }
