@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const genPwd = require("./passgen");
+const serverless = require("serverless-http");
 
 const app = express();
 
@@ -26,7 +27,7 @@ app.post("/password", (req, res) => {
 
 	answer = { status: "success", password: String(pwd) };
 
-	console.log(answer);
+	// console.log(answer);
 
 	res.status(200).json(answer);
 });
@@ -36,3 +37,5 @@ app.get(["/", "/ping"], (req, res) =>
 );
 
 app.listen(PORT, () => console.log(`Listening to port ${PORT}`));
+
+export const handler = serverless(api);
